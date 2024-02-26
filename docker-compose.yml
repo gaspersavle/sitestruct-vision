@@ -1,0 +1,17 @@
+version: '3'
+services:
+  camera-pub-0:
+    container_name: camerapub 
+    image: visionpi:devel
+    privileged: true 
+    command: tail -f /dev/null
+    #command: "/bin/bash -c 'source /root/catkin_ws/devel/setup.bash && cd /root/catkin_ws/src && python3 camerapub.py'"
+    volumes:
+      - /home/pi/camera_manager/src:/root/catkin_ws/src/
+    devices:
+      - /dev:/dev
+    environment:
+      - "ROS_MASTER_URI=http://10.20.0.1:11311"
+      - "ROS_IP=10.20.1.158"
+    network_mode: "host"
+    tty: true
