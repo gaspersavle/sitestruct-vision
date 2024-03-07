@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     python3-rosdep \
     python3-rosinstall \
+    python3-rpi.gpio \
     python3-vcstools \
     python3-catkin-tools \
     neovim \
