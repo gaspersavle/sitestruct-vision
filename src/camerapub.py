@@ -78,7 +78,7 @@ class example():
         roscolour = self.bridge.cv2_to_compressed_imgmsg(colour_img)
 
         self.pub_rs_depth.publish(rosdepth)
-        self.pub_rs_colour.publish(roscolour)
+        self.pub_rs_rgb.publish(roscolour)
         
         ret, frame = self.cap_generic.read()
         if ret:

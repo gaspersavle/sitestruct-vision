@@ -1,4 +1,3 @@
-#Base image with ROS Noetic on ARM architecture
 FROM ros:noetic-ros-base
 
 SHELL ["/bin/bash", "-c"]
@@ -9,7 +8,6 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     ipython3 \
     python3-dev \
-    python3-rpi.gpio \
     python3-rosdep \
     python3-rosinstall \
     python3-vcstools \
